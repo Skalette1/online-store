@@ -1,0 +1,14 @@
+@media (max-width: 600px) {
+  #phone {
+    display: none;
+  }
+
+  .navbar  {
+    display: none;
+  }
+
+  .actions {
+    display: none !important;
+}
+
+}
