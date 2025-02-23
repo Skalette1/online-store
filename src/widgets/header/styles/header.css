@@ -35,7 +35,7 @@ header {
 }
 
 button {
-  color: #4f4f4f;
+  color: #282727;
   background: none;
   border: none;
   padding: 0.5rem;
@@ -58,7 +58,7 @@ select {
 }
 
 .burger-button {
-    display: none;
+  display: none;
 }
 
 .actions-bottom {
@@ -70,4 +70,3 @@ select {
 .navbar img {
   display: none;
 }
-
