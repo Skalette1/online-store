@@ -1,40 +1,37 @@
+import React from "react";
+import { eat } from "../../moks/eat";
 import { useDispatch, useSelector } from "react-redux";
-import { productCart } from "../../moks/productMoks";
+import { setEatLoading, setEatVisibleCount } from "../../../features/model/eatVisibleReducer";
 import { Spin } from "antd";
 import { MoreButton } from "../MoreButton";
-import "@/shared/ui/productCard/product.css";
-import {
-  setProductLoading,
-  setProductVisibleCount,
-} from "../../../features/model/productVisibleReducer";
 
-export const ProductCard = () => {
+export const Eat = () => {
   const dispatch = useDispatch();
-  const visibleCount = useSelector((state) => state.product.visibleCount);
-  const loading = useSelector((state) => state.product.loading);
+  const visibleCount = useSelector((state) => state.eat.visibleCount);
+  const loading = useSelector((state) => state.eat.loading);
 
-  const handleLoadMore = () => {
-    dispatch(setProductLoading(true));
+  const handleMore = () => {
+    dispatch(setEatLoading(true));
     setTimeout(() => {
-      dispatch(setProductVisibleCount());
-      dispatch(setProductLoading(false));
+      dispatch(setEatVisibleCount());
+      dispatch(setEatLoading(false));
     }, 2000);
   };
 
   return (
     <div className="">
-      Готовые миксы
-      {visibleCount < productCart.length && (
-        <button onClick={handleLoadMore} disabled={loading}>
+      Зёрна
+      {visibleCount < eat.length && (
+        <button onClick={handleMore} disabled={loading}>
           {loading ? <Spin /> : <MoreButton />}
         </button>
       )}
       <div className="card-container">
-        {productCart.slice(0, visibleCount).map((item, id) => (
+        {eat.slice(0, visibleCount).map((item, id) => (
           <ul key={id} className="card">
             <img src={item.img} alt="" />
             <li>{item.name}</li>
-            <span>{item.description}</span>
+            <li>{item.descriptions}</li>
             <li>{item.price}</li>
             {item.gramms.map((gramm) => (
               <ul key={gramm.id} className="gramms">

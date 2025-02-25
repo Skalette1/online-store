@@ -1,19 +1,28 @@
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
   gap: 1rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  flex: 1 1 200px;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
   gap: 0.5rem;
   text-align: left;
-  background-color: #f2f2f2;
+  background-color: #fff;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -24,24 +33,14 @@
   border-radius: 1rem;
 }
 
-.card li {
-  list-style: none;
+.card h3 {
   font-size: 1.4rem;
   font-weight: 600;
-}
-
-.gramms {
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-  gap: 1rem;
   margin: 0;
-  padding: 0;
-  color: #4f4f4f;
 }
 
-.gramms li {
-  display: flex;
-  font-weight: 500;
-  font-size: 1.1rem;
+.card p {
+  font-size: 0.9rem;
+  color: #828282;
+  margin: 0;
 }

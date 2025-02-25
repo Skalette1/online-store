@@ -1,15 +1,16 @@
 import "@/app/styles/style.css";
-import { Header } from "../widgets/header/Header";
-import { Footer } from "../widgets/footer/footer";
-import { Mixes } from "../shared/ui/productCard/Mixes";
 
+// import { Footer } from "../widgets/footer/footer";
+
+import { Header } from "../widgets/header/Header";
+import { Home } from "../pages/Home";
 
 const App = () => {
   return (
     <>
       <Header />
-      <Mixes />
-      <Footer />
+      <Home />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -1,6 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { countReducer } from "../widgets/header/model/cartReducer";
-
-export const store = configureStore({
-  reducer: countReducer,
+import birdVisibleReducer from "../features/model/birdVisibleReducer";
+import productVisibleReducer from "../features/model/productVisibleReducer";
+import eatVisibleReducer from '../features/model/eatVisibleReducer.js'
+const store = configureStore({
+  reducer: {
+    bird: birdVisibleReducer,
+    product: productVisibleReducer,
+    eat: eatVisibleReducer,
+  },
 });
+
+export default store;
