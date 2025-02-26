@@ -1,7 +1,8 @@
 .card-container {
-  display: grid !important;
+  /* display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
-  gap: 1rem;
+  gap: 1rem; */
+  
 }
 
 .card {

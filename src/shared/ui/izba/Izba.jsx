@@ -1,41 +1,42 @@
-import { eat } from "../../moks/eat";
+import React from "react";
+import { izba } from "../../moks/izba";
+import "@/shared/ui/izba/izba.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  setEatLoading,
-  setEatVisibleCount,
-} from "../../../features/model/eatVisibleReducer";
+  setIzbaLoading,
+  setVisibleCount,
+} from "../../../features/model/izbarVisibleReducer";
 import { Spin } from "antd";
 import { MoreButton } from "../MoreButton";
 import { DetailedButton } from "../../model/DetailedButton";
 import { useLocation } from "react-router-dom";
 
-export const Eat = () => {
+export const Izba = () => {
   const dispatch = useDispatch();
-  const visibleCount = useSelector((state) => state.eat.visibleCount);
-  const loading = useSelector((state) => state.eat.loading);
+  const visibleCount = useSelector((state) => state.izba.visibleCount);
+  const loading = useSelector((state) => state.izba.loading);
 
   const location = useLocation()
 
-  const showAllCard = location.pathname === '/food'
+  const showAllCard = location.pathname === '/izba'
 
   const handleMore = () => {
-    dispatch(setEatLoading(true));
+    dispatch(setIzbaLoading(true));
     setTimeout(() => {
-      dispatch(setEatVisibleCount());
-      dispatch(setEatLoading(false));
+      dispatch(setIzbaLoading(false));
+      dispatch(setVisibleCount());
     }, 1400);
   };
-
   return (
     <div className="">
-      Зёрна
-      {!showAllCard && visibleCount < eat.length && (
+      Кормушки
+      {!showAllCard && visibleCount < izba.length && (
         <button onClick={handleMore} disabled={loading}>
           {loading ? <Spin /> : <MoreButton />}
         </button>
       )}
       <div className="card-container">
-        {(showAllCard? eat : eat.slice(0, visibleCount)).map((item, id) => (
+        {(showAllCard? izba : izba.slice(0, visibleCount)).map((item, id) => (
           <ul key={id} className="card">
             <img src={item.img} alt="" />
             <li>{item.name}</li>
@@ -43,14 +44,6 @@ export const Eat = () => {
               {item.descriptions}
             </li>
             <li>{item.price}</li>
-            {item.gramms.map((gramm) => (
-              <ul key={gramm.id} className="gramms">
-                <li>{gramm.gramm1}</li>
-                <li>{gramm.gramm2}</li>
-                <li>{gramm.gramm3}</li>
-                <li>{gramm.gramm4}</li>
-              </ul>
-            ))}
             <DetailedButton />
           </ul>
         ))}

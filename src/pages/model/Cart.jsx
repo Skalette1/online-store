@@ -1,4 +1,5 @@
-import { Header } from "../widgets/header/Header";
+import { Header } from "../../widgets/header/Header";
+
 
 export const Cart = () => {
   return (

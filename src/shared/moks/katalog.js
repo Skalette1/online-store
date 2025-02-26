@@ -2,7 +2,7 @@ export const katalog = [
   {
     id: 1,
     img: "src/shared/assets/public api/feedingTrough.png",
-    name: "кормушки",
+    name: "Кормушки",
     descriptions: "1",
   },
   {

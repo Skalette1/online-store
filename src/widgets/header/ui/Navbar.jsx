@@ -1,21 +1,30 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState();
+  const navigate = useNavigate()
+
+  const handleChange = (event) => {
+    const selectedValue = event.target.value
+    if(selectedValue) {
+      navigate(selectedValue)
+    }
+  }
   return (
     <div className="navbar">
-      <select name="" id="">
-        <option value="">Каталог</option>
-        <option value="">Готовые миксы</option>
-        <option value="">Отдельные виды кормов</option>
-        <option value="">Готовые комплекты</option>
+   <select name="" id="" onChange={handleChange}>
+        <option value="/">Каталог</option>
+        <option value="/">На главную</option>
+        <option value="/mixes">Готовые миксы</option>
+        <option value="/food">Отдельные виды кормов</option>
+        <option value="/izba">Готовые комплекты</option>
       </select>
       <div className={`navbar ${isOpen ? "active" : ""}`}>
         <button>О проекте</button>
         <button>Птицы</button>
         <button>Пожертвования</button>
-        <Link to="cart">
+        <Link to="/cart">
           <img
             src="src/shared/assets/public api/Buy.svg"
             alt="cart"
