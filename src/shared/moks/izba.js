@@ -21,13 +21,6 @@ export const izba = [
     price: "1000 руб.",
   },
   {
-    id: 3,
-    img: "src/shared/assets/public api/izba.png",
-    name: 'Комплект-агро "Избушка на курьих ножках"',
-    descriptions: "кормушка малая",
-    price: "1000 руб.",
-  },
-  {
     id: 4,
     img: "src/shared/assets/public api/izba.png",
     name: 'Комплект-агро "Избушка на курьих ножках"',
@@ -50,6 +43,13 @@ export const izba = [
   },
   {
     id: 7,
+    img: "src/shared/assets/public api/izba.png",
+    name: 'Комплект-агро "Избушка на курьих ножках"',
+    descriptions: "кормушка малая",
+    price: "1000 руб.",
+  },
+  {
+    id: 8,
     img: "src/shared/assets/public api/izba.png",
     name: 'Комплект-агро "Избушка на курьих ножках"',
     descriptions: "кормушка малая",

@@ -23,7 +23,7 @@ export const productCart = [
     price: "1000 руб.",
     gramms: [
       {
-        id: 1,
+        id: 2,
         gramm1: "200 г",
         gramm2: "400 г",
         gramm3: "800 г",
@@ -39,7 +39,7 @@ export const productCart = [
     price: "1000 руб.",
     gramms: [
       {
-        id: 1,
+        id: 3,
         gramm1: "200 г",
         gramm2: "400 г",
         gramm3: "800 г",
@@ -55,7 +55,7 @@ export const productCart = [
     price: "1000 руб.",
     gramms: [
       {
-        id: 1,
+        id: 4,
         gramm1: "200 г",
         gramm2: "400 г",
         gramm3: "800 г",
@@ -71,7 +71,7 @@ export const productCart = [
     price: "1000 руб.",
     gramms: [
       {
-        id: 1,
+        id: 5,
         gramm1: "200 г",
         gramm2: "400 г",
         gramm3: "800 г",
@@ -87,7 +87,7 @@ export const productCart = [
     price: "1000 руб.",
     gramms: [
       {
-        id: 1,
+        id: 6,
         gramm1: "200 г",
         gramm2: "400 г",
         gramm3: "800 г",
@@ -103,7 +103,7 @@ export const productCart = [
     price: "1000 руб.",
     gramms: [
       {
-        id: 1,
+        id: 7,
         gramm1: "200 г",
         gramm2: "400 г",
         gramm3: "800 г",
@@ -119,7 +119,7 @@ export const productCart = [
     price: "1000 руб.",
     gramms: [
       {
-        id: 1,
+        id: 8,
         gramm1: "200 г",
         gramm2: "400 г",
         gramm3: "800 г",

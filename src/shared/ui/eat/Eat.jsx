@@ -8,15 +8,16 @@ import { Spin } from "antd";
 import { MoreButton } from "../MoreButton";
 import { DetailedButton } from "../../model/DetailedButton";
 import { useLocation } from "react-router-dom";
-
+import { CartFooter } from "../../model/CartFooter";
+import { BackOnMAin } from "../../model/BackOnMAin";
 export const Eat = () => {
   const dispatch = useDispatch();
   const visibleCount = useSelector((state) => state.eat.visibleCount);
   const loading = useSelector((state) => state.eat.loading);
 
-  const location = useLocation()
+  const location = useLocation();
 
-  const showAllCard = location.pathname === '/food'
+  const showAllCard = location.pathname === "/food";
 
   const handleMore = () => {
     dispatch(setEatLoading(true));
@@ -28,14 +29,16 @@ export const Eat = () => {
 
   return (
     <div className="">
-      Зёрна
+      <div className="headCard">
+        Готовые миксы {showAllCard && <BackOnMAin />}
+      </div>
       {!showAllCard && visibleCount < eat.length && (
         <button onClick={handleMore} disabled={loading}>
           {loading ? <Spin /> : <MoreButton />}
         </button>
       )}
       <div className="card-container">
-        {(showAllCard? eat : eat.slice(0, visibleCount)).map((item, id) => (
+        {(showAllCard ? eat : eat.slice(0, visibleCount)).map((item, id) => (
           <ul key={id} className="card">
             <img src={item.img} alt="" />
             <li>{item.name}</li>
@@ -51,7 +54,7 @@ export const Eat = () => {
                 <li>{gramm.gramm4}</li>
               </ul>
             ))}
-            <DetailedButton />
+            <CartFooter item={item} />
           </ul>
         ))}
       </div>

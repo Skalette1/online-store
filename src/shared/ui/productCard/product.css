@@ -1,17 +1,19 @@
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  flex: 1 1 200px;
-  gap: 0.5rem;
+  gap: 1rem;
   text-align: left;
   background-color: #f2f2f2;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -30,10 +32,42 @@
   font-weight: 600;
 }
 
+.card span {
+  font-size: 1rem;
+  color: #666;
+}
+
+.headCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0.5rem;
+  color: #bdbdbd;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+#backLink {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#backLink::before {
+  content: "";
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  background-image: url("../../assets/public api/eva_arrow-ios-upward-outline.svg");
+  background-size: cover;
+}
+
 .gramms {
   display: flex;
   justify-content: start;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   margin: 0;
   padding: 0;
@@ -43,5 +77,38 @@
 .gramms li {
   display: flex;
   font-weight: 500;
+  padding: 0.5rem 0.75rem;
   font-size: 1.1rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 950px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .card img {
+    height: 12rem;
+  }
+
+  .card li {
+    font-size: 1.2rem;
+  }
+
+  .gramms li {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+  }
 }

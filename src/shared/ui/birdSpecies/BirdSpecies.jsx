@@ -25,7 +25,9 @@ export const BirdSpecies = () => {
 
   return (
     <div className="">
-      <span>Виды птиц</span>
+      <div className="headCard">
+        <span>Виды птиц</span>{" "}
+      </div>
       {visibleCount < birdSpecies.length && (
         <button onClick={handleLoadMore} disabled={loading}>
           {loading ? <Spin /> : <MoreButton />}

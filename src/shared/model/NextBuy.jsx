@@ -1,16 +1,18 @@
-export const DetailedButton = () => {
+import React from "react";
+
+export const NextBuy = () => {
   return (
     <div>
       <button
         style={{
           background: "#3FCF5E",
-          borderRadius: ".8rem",
           color: "#fff",
+          padding: ".9rem 2.4rem",
           fontSize: "1.1rem",
-          padding: ".8rem 1.2rem",
+          fontWeight: "600",
         }}
       >
-        Подробнее
+        Дальше
       </button>
     </div>
   );

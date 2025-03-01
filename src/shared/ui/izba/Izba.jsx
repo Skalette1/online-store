@@ -10,15 +10,16 @@ import { Spin } from "antd";
 import { MoreButton } from "../MoreButton";
 import { DetailedButton } from "../../model/DetailedButton";
 import { useLocation } from "react-router-dom";
-
+import { CartFooter } from "../../model/CartFooter";
+import { BackOnMAin } from "../../model/BackOnMAin";
 export const Izba = () => {
   const dispatch = useDispatch();
   const visibleCount = useSelector((state) => state.izba.visibleCount);
   const loading = useSelector((state) => state.izba.loading);
 
-  const location = useLocation()
+  const location = useLocation();
 
-  const showAllCard = location.pathname === '/izba'
+  const showAllCard = location.pathname === "/izba";
 
   const handleMore = () => {
     dispatch(setIzbaLoading(true));
@@ -29,14 +30,16 @@ export const Izba = () => {
   };
   return (
     <div className="">
-      Кормушки
+      <div className="headCard">
+        Готовые миксы {showAllCard && <BackOnMAin />}
+      </div>
       {!showAllCard && visibleCount < izba.length && (
         <button onClick={handleMore} disabled={loading}>
           {loading ? <Spin /> : <MoreButton />}
         </button>
       )}
       <div className="card-container">
-        {(showAllCard? izba : izba.slice(0, visibleCount)).map((item, id) => (
+        {(showAllCard ? izba : izba.slice(0, visibleCount)).map((item, id) => (
           <ul key={id} className="card">
             <img src={item.img} alt="" />
             <li>{item.name}</li>
@@ -44,7 +47,7 @@ export const Izba = () => {
               {item.descriptions}
             </li>
             <li>{item.price}</li>
-            <DetailedButton />
+            <CartFooter item={item} />
           </ul>
         ))}
       </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { Profile } from "../model/Profile";
 export const Actions = () => {
   return (
     <div className="actions">
@@ -17,7 +17,7 @@ export const Actions = () => {
             width={35}
           />
         </Link>
-        <img src="src/shared/assets/public api/Add User.svg" alt="profile" />
+        <Profile />
       </div>
     </div>
   );

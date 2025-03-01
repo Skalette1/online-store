@@ -18,15 +18,12 @@
 
   .navbar.active {
     left: 0;
+    z-index: 1000;
   }
 
   .actions-bottom .active {
     position: fixed;
     left: 0;
-  }
-
-  select {
-    display: none;
   }
 
   .navbar-buttons {
