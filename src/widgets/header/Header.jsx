@@ -4,12 +4,16 @@ import { Actions } from "./ui/Actions";
 import { Search } from "./model/Search";
 import logo from "@/shared/assets/public api/logo.svg";
 import { Navbar } from "./ui/Navbar";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
+  const handleSearch = () => {};
   return (
     <header>
       <div className="header-top">
-        <img src={logo} alt="logo" id="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" id="logo" />
+        </Link>
         <Actions />
       </div>
       <div className="header-bottom">

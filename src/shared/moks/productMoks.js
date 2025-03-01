@@ -5,6 +5,7 @@ export const productCart = [
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
+    quantity: 1,
     gramms: [
       {
         id: 1,
@@ -21,6 +22,7 @@ export const productCart = [
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
+    quantity: 1,
     gramms: [
       {
         id: 2,
@@ -37,6 +39,7 @@ export const productCart = [
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
+    quantity: 1,
     gramms: [
       {
         id: 3,
@@ -53,6 +56,7 @@ export const productCart = [
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
+    quantity: 1,
     gramms: [
       {
         id: 4,
@@ -69,6 +73,7 @@ export const productCart = [
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
+    quantity: 1,
     gramms: [
       {
         id: 5,
@@ -85,6 +90,7 @@ export const productCart = [
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
+    quantity: 1,
     gramms: [
       {
         id: 6,
@@ -101,6 +107,7 @@ export const productCart = [
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
+    quantity: 1,
     gramms: [
       {
         id: 7,
@@ -117,6 +124,7 @@ export const productCart = [
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
+    quantity: 1,
     gramms: [
       {
         id: 8,

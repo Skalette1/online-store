@@ -2,12 +2,18 @@ import { useSelector } from "react-redux";
 import { CartFooter } from "../../../shared/model/CartFooter";
 import { BackOnMAin } from "../../../shared/model/BackOnMAin";
 import "@/features/model/cart/cart.css";
+import "@/features/model/cart/styles/cartMedia.css";
 import { RemoveButton } from "../../../shared/model/RemoveButton";
-import { CartCounter } from "../cartCounter";
 import { Link } from "react-router-dom";
+import { CartCounter } from "../cartCounter";
 
 export const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
+
+  const extractPrice = (priceString) => {
+    const numericValue = priceString.replace(/[^0-9.]/g, "");
+    return parseFloat(numericValue);
+  };
 
   return (
     <div>
@@ -26,13 +32,14 @@ export const Cart = () => {
               <div className="cart-card-mid">
                 <li key={item.id}>{item.name}</li>
                 <li>
-                  <span style={{ color: "#828282" }}>Итого:</span> {item.price}
+                  <span style={{ color: "#828282" }}>Итого:</span>{" "}
+                  {extractPrice(item.price) * item.quantity} руб.
                 </li>
               </div>
               <div className="cart-card-footer">
                 <RemoveButton item={item} />
-                <CartCounter />
-                <Link to="buy1">
+                <CartCounter itemId={item.id} />
+                <Link to="/buy1">
                   <button id="buyBtn">Оплатить</button>
                 </Link>
               </div>
@@ -46,8 +53,7 @@ export const Cart = () => {
   );
 };
 
-{
-  /* {item.gramms.map((gramm) => (
+/* {item.gramms.map((gramm) => (
                 <ul key={gramm.id} className="gramms">
                   <li>{gramm.gramm1}</li>
                   <li>{gramm.gramm2}</li>
@@ -55,4 +61,3 @@ export const Cart = () => {
                   <li>{gramm.gramm4}</li>
                 </ul>
               ))} */
-}

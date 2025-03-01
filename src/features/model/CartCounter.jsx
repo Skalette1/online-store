@@ -1,24 +1,29 @@
-import "@/features/model/cart/cart.css";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "./reducers/cartCounterReducer";
+import { decrement, increment } from "./reducers/cartReducer";
 
-export const CartCounter = () => {
+export const CartCounter = ({ itemId }) => {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state.counter.count);
-  const disabled = counter <= 0;
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const item = cartItems.find((item) => item.id === itemId);
+
+  if (!item) return null;
+
+  const disabled = item.quantity <= 1; // Кнопка "-" отключается, если количество 1
+
   return (
-    <div>
+    <div className="counter-container">
       <p style={{ color: "#BDBDBD" }}>Количество:</p>
       <div className="counter-mid">
         <button
           className="counter"
-          onClick={() => dispatch(decrement())}
+          onClick={() => dispatch(decrement(itemId))} // Передаем itemId
           disabled={disabled}
         >
           -
         </button>
-        <p>{counter}</p>
-        <button className="counter" onClick={() => dispatch(increment())}>
+        <p>{item.quantity}</p>
+        <button className="counter" onClick={() => dispatch(increment(itemId))}>
           +
         </button>
       </div>

@@ -10,8 +10,10 @@ import {
   setProductLoading,
   setProductVisibleCount,
 } from "../../../features/model/productVisibleReducer";
+import { useState } from "react";
 
 export const ProductCard = () => {
+  const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
   const visibleCount = useSelector((state) => state.product.visibleCount);
   const loading = useSelector((state) => state.product.loading);
@@ -20,6 +22,9 @@ export const ProductCard = () => {
 
   const showAllCard = location.pathname === "/mixes";
 
+  const filteredProducts = productCart.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
   const handleLoadMore = () => {
     dispatch(setProductLoading(true));
     setTimeout(() => {

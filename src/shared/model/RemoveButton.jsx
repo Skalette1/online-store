@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { remove } from "../../features/model/reducers/cartReducer";
-
+import { removeFromCart } from "../../features/model/reducers/cartCounterReducer";
 export const RemoveButton = ({ item }) => {
   const dispatch = useDispatch();
   const removeFromCart = () => {
@@ -10,6 +9,7 @@ export const RemoveButton = ({ item }) => {
   return (
     <div>
       <button
+        className="remove"
         onClick={removeFromCart}
         style={{
           background: "red",
