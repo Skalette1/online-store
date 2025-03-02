@@ -15,6 +15,7 @@ import { Success } from "../../entities/ui/buy/Success.jsx";
 import { Condition } from "../../entities/ui/buy/Condition.jsx";
 import { AssemblyDetail } from "../../pages/model/detailedpage/AssemblyDetail.jsx";
 
+const baseName = '/online-store' 
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -72,4 +73,4 @@ export const router = createBrowserRouter([
     path: "detail",
     element: <AssemblyDetail />,
   },
-]);
+], {baseName});
