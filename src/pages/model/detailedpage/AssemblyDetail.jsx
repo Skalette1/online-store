@@ -2,9 +2,11 @@ import React from "react";
 import { DetailedPage } from "./DetailedPage";
 import { Carousel } from "./DetailCarousel";
 import { Eat } from "../../../shared/ui/eat/Eat";
-import { Izba } from "../../../shared/ui/izba/izba";
+import { useSelector } from "react-redux";
+import { Izba } from "../../../shared/ui/izba/Izba";
 
 export const AssemblyDetail = () => {
+  const searchQuery = useSelector((state) => state.search.searchQuery);
   return (
     <div>
       <DetailedPage />
@@ -13,11 +15,12 @@ export const AssemblyDetail = () => {
         <Carousel />
       </div>
       <div className="cards-also">
-        <h2>С этим товаром смотрят</h2>
+        {!searchQuery && <h2>С этим товаром смотрят</h2>}
+
         <Eat />
       </div>
       <div className="cards-also">
-        <h2>С этим товаром покупают</h2>
+        {!searchQuery && <h2>С этим товаром покупают</h2>}
         <Izba />
       </div>
     </div>

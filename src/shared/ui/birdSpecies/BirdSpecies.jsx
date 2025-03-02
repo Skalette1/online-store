@@ -8,13 +8,16 @@ import "@/shared/ui/styles/media.css";
 import {
   setBirdVisibleCount,
   setBirdLoading,
-} from "../../../features/model/birdVisibleReducer";
-
+} from "../../../features/model/reducers/birdVisibleReducer";
 export const BirdSpecies = () => {
   const dispatch = useDispatch();
   const visibleCount = useSelector((state) => state.bird.visibleCount);
   const loading = useSelector((state) => state.bird.loading);
+  const searchQuery = useSelector((state) => state.search.searchQuery);
 
+  const filteredProducts = birdSpecies.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
   const handleLoadMore = () => {
     dispatch(setBirdLoading(true));
     setTimeout(() => {
@@ -25,16 +28,18 @@ export const BirdSpecies = () => {
 
   return (
     <div className="">
-      <div className="headCard">
-        <span>Виды птиц</span>{" "}
-      </div>
-      {visibleCount < birdSpecies.length && (
+      {!searchQuery && (
+        <div className="headCard">
+          <span>Виды птиц</span>{" "}
+        </div>
+      )}
+      {visibleCount < filteredProducts.length && (
         <button onClick={handleLoadMore} disabled={loading}>
           {loading ? <Spin /> : <MoreButton />}
         </button>
       )}
       <div className="card-container">
-        {birdSpecies.slice(0, visibleCount).map((item, id) => (
+        {filteredProducts.slice(0, visibleCount).map((item, id) => (
           <div key={id} className="card">
             <img src={item.img} alt="bird" />
             <h3>{item.name}</h3>

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { productCart } from "../../moks/productMoks";
-import { Card, Spin } from "antd";
+import { Spin } from "antd";
 import { MoreButton } from "../MoreButton";
 import "@/shared/ui/productCard/product.css";
 import { useLocation } from "react-router-dom";
@@ -9,15 +9,13 @@ import { BackOnMAin } from "../../model/BackOnMAin";
 import {
   setProductLoading,
   setProductVisibleCount,
-} from "../../../features/model/productVisibleReducer";
-import { useState } from "react";
+} from "../../../features/model/reducers/productVisibleReducer";
 
 export const ProductCard = () => {
-  const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
   const visibleCount = useSelector((state) => state.product.visibleCount);
   const loading = useSelector((state) => state.product.loading);
-
+  const searchQuery = useSelector((state) => state.search.searchQuery);
   const location = useLocation();
 
   const showAllCard = location.pathname === "/mixes";
@@ -35,34 +33,37 @@ export const ProductCard = () => {
 
   return (
     <div className="">
-      <div className="headCard">
-        Готовые миксы {showAllCard && <BackOnMAin />}
-      </div>
-      {!showAllCard && visibleCount < productCart.length && (
+      {!searchQuery && (
+        <div className="headCard">
+          Готовые миксы {showAllCard && <BackOnMAin />}
+        </div>
+      )}
+      {!showAllCard && visibleCount < filteredProducts.length && (
         <button onClick={handleLoadMore} disabled={loading}>
           {loading ? <Spin /> : <MoreButton />}
         </button>
       )}
       <div className="card-container">
-        {(showAllCard ? productCart : productCart.slice(0, visibleCount)).map(
-          (item, id) => (
-            <ul key={id} className="card">
-              <img src={item.img} alt="" />
-              <li>{item.name}</li>
-              <span>{item.description}</span>
-              <li>{item.price}</li>
-              {item.gramms.map((gramm) => (
-                <ul key={gramm.id} className="gramms">
-                  <li>{gramm.gramm1}</li>
-                  <li>{gramm.gramm2}</li>
-                  <li>{gramm.gramm3}</li>
-                  <li>{gramm.gramm4}</li>
-                </ul>
-              ))}
-              <CartFooter item={item} />
-            </ul>
-          ),
-        )}
+        {(showAllCard
+          ? productCart
+          : filteredProducts.slice(0, visibleCount)
+        ).map((item, id) => (
+          <ul key={id} className="card">
+            <img src={item.img} alt="" />
+            <li>{item.name}</li>
+            <span>{item.description}</span>
+            <li>{item.price}</li>
+            {item.gramms.map((gramm) => (
+              <ul key={gramm.id} className="gramms">
+                <li>{gramm.gramm1}</li>
+                <li>{gramm.gramm2}</li>
+                <li>{gramm.gramm3}</li>
+                <li>{gramm.gramm4}</li>
+              </ul>
+            ))}
+            <CartFooter item={item} />
+          </ul>
+        ))}
       </div>
     </div>
   );

@@ -1,29 +1,4 @@
-@font-face {
-  font-family: "Gilroy";
-  src:
-    url("../assets/fonts/Gilroy-Regular.woff2") format("woff2"),
-    url("../assets/fonts/Gilroy-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  src:
-    url("../assets/fonts/Gilroy-Bold.woff2") format("woff2"),
-    url("../assets/fonts/Gilroy-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-body {
-  font-family: "Gilroy", sans-serif;
-  font-weight: 400;
-}
-
 h1 {
-  font-family: "Gilroy", sans-serif;
-  font-weight: 700; /* Жирный вес */
+  font-family: sans-serif;
+  font-weight: 700;
 }

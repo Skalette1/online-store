@@ -7,7 +7,6 @@ import { Navbar } from "./ui/Navbar";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
-  const handleSearch = () => {};
   return (
     <header>
       <div className="header-top">

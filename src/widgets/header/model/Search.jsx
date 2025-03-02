@@ -1,12 +1,13 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setSearchQuery } from "../../../features/model/reducers/searchReducer";
 
-export const Search = ({ onSearch }) => {
-  const [query, setQuery] = useState("");
+export const Search = () => {
+  const dispatch = useDispatch();
 
   const getInputChange = (event) => {
     const value = event.target.value;
-    setQuery(value);
-    onSearch(value);
+    dispatch(setSearchQuery(value));
   };
   return (
     <div>
@@ -14,7 +15,6 @@ export const Search = ({ onSearch }) => {
         type="search"
         placeholder="Поиск"
         id="search"
-        value={query}
         onChange={getInputChange}
       />
     </div>
