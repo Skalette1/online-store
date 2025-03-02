@@ -5,7 +5,7 @@ import "@/features/model/cart/cart.css";
 import "@/features/model/cart/styles/cartMedia.css";
 import { RemoveButton } from "../../../shared/model/RemoveButton";
 import { Link } from "react-router-dom";
-import CartCounter from "@/features/model/CartCounter.jsx";
+import {CartCounter} from "@/features/model/CartCounter.jsx";
 export const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
 

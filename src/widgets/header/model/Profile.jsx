@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Popup } from "antd-mobile";
 import "@/widgets/header/styles/headerMedia.css";
 import { Link } from "react-router-dom";
+import { Popup } from "antd-mobile";
 export const Profile = () => {
   const [visible, setVisible] = useState(false);
   return (
