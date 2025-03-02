@@ -4,6 +4,11 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      external: ["antd-mobile"], // Добавьте antd-mobile в external
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
