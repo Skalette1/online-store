@@ -9,6 +9,7 @@ export default defineConfig({
       external: ["antd-mobile"], // Добавьте antd-mobile в external
     },
   },
+  base: '/online-store/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
