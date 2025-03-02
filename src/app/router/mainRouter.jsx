@@ -13,7 +13,7 @@ import { BuySecond } from "../../entities/ui/buy/BuySecond.jsx";
 import { BuyThird } from "../../entities/ui/buy/BuyThird.jsx";
 import { Success } from "../../entities/ui/buy/Success.jsx";
 import { Condition } from "../../entities/ui/buy/Condition.jsx";
-import { DetailedPage } from "../../pages/model/detailedpage/DetailedPage.jsx";
+import { AssemblyDetail } from "../../pages/model/detailedpage/AssemblyDetail.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -70,6 +70,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "detail",
-    element: <DetailedPage />,
+    element: <AssemblyDetail />,
   },
 ]);

@@ -49,6 +49,7 @@ select {
   border: none;
   color: #4f4f4f;
   font-size: 1.1rem;
+  display: block;
 }
 
 #search {

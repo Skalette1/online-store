@@ -19,6 +19,11 @@
 }
 
 body {
-  font-family: "Roboto", serif;
+  font-family: "Gilroy", sans-serif;
   font-weight: 400;
+}
+
+h1 {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700; /* Жирный вес */
 }

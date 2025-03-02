@@ -3,23 +3,24 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState();
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const handleChange = (event) => {
-    const selectedValue = event.target.value;
-    if (selectedValue) {
-      navigate(selectedValue);
+    const selected = event.target.value;
+    if (selected) {
+      navigate(selected);
     }
   };
+
   return (
     <div className="navbar">
-      <select name="" id="" onChange={handleChange}>
-        <option value="/">Каталог</option>
-        <option value="/mixes">Готовые миксы</option>
-        <option value="/food">Отдельные виды кормов</option>
-        <option value="/izba">Готовые комплекты</option>
-      </select>
       <div className={`navbar ${isOpen ? "active" : ""}`}>
+        <select name="" id="" onChange={handleChange}>
+          <option value="/">Каталог</option>
+          <option value="/mixes">Готовые миксы</option>
+          <option value="/food">Отдельные виды кормов</option>
+          <option value="/izba">Готовые комплекты</option>
+        </select>
         <button>О проекте</button>
         <button>Птицы</button>
         <button>Пожертвования</button>

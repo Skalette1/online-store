@@ -37,7 +37,7 @@ export const Cart = () => {
                 </li>
               </div>
               <div className="cart-card-footer">
-                <RemoveButton item={item} />
+                {/* <RemoveButton item={item} /> */}
                 <CartCounter itemId={item.id} />
                 <Link to="/buy1">
                   <button id="buyBtn">Оплатить</button>
