@@ -1,5 +1,6 @@
 import React from "react";
-import { Izba } from "./izba";
+import { Izba } from "./Izba";
+
 
 export const AssemblyIzba = () => {
   return (
