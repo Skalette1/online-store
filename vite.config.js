@@ -4,11 +4,6 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      external: ["antd-mobile"], // Добавьте antd-mobile в external
-    },
-  },
   base: '/online-store/',
   resolve: {
     alias: {
