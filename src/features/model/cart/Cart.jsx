@@ -5,8 +5,7 @@ import "@/features/model/cart/cart.css";
 import "@/features/model/cart/styles/cartMedia.css";
 import { RemoveButton } from "../../../shared/model/RemoveButton";
 import { Link } from "react-router-dom";
-import { CartCounter } from "../cartCounter";
-
+import CartCounter from "@/features/model/CartCounter.jsx";
 export const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
 
@@ -52,12 +51,3 @@ export const Cart = () => {
     </div>
   );
 };
-
-/* {item.gramms.map((gramm) => (
-                <ul key={gramm.id} className="gramms">
-                  <li>{gramm.gramm1}</li>
-                  <li>{gramm.gramm2}</li>
-                  <li>{gramm.gramm3}</li>
-                  <li>{gramm.gramm4}</li>
-                </ul>
-              ))} */
