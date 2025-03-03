@@ -45,7 +45,7 @@ export const Eat = () => {
         {(showAllCard ? eat : filteredEat.slice(0, visibleCount)).map(
           (item, id) => (
             <ul key={id} className="card">
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="food" />
               <li>{item.name}</li>
               <li className="descriptions" style={{ fontSize: ".9rem" }}>
                 {item.descriptions}

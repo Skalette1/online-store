@@ -49,7 +49,7 @@ export const ProductCard = () => {
           : filteredProducts.slice(0, visibleCount)
         ).map((item, id) => (
           <ul key={id} className="card">
-            <img src={item.img} alt="" />
+            <img src={item.img} alt="padovan" />
             <li>{item.name}</li>
             <span>{item.description}</span>
             <li>{item.price}</li>

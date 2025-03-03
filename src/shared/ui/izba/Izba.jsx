@@ -45,7 +45,7 @@ export const Izba = () => {
         {(showAllCard ? izba : filteredIzba.slice(0, visibleCount)).map(
           (item, id) => (
             <ul key={id} className="card">
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="izba" />
               <li>{item.name}</li>
               <li className="descriptions" style={{ fontSize: ".9rem" }}>
                 {item.descriptions}
