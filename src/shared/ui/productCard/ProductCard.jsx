@@ -61,7 +61,7 @@ export const ProductCard = () => {
                 <li>{gramm.gramm4}</li>
               </ul>
             ))}
-            <CartFooter item={item}/>
+            <CartFooter item={item} />
           </ul>
         ))}
       </div>

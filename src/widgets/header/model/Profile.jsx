@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "@/widgets/header/styles/headerMedia.css";
 import { Link } from "react-router-dom";
 import { Popup } from "antd-mobile";
+import profile from "/public/assets/public api/Add User.svg";
 export const Profile = () => {
   const [visible, setVisible] = useState(false);
   return (
@@ -11,7 +12,7 @@ export const Profile = () => {
       }}
     >
       <button onClick={() => setVisible(true)}>
-        <img src="/public/assets/public api/Add User.svg" alt="" />
+        <img src={profile} alt="profile" />
         <Popup
           visible={visible}
           onMaskClick={() => setVisible(false)}

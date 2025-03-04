@@ -3,15 +3,14 @@ import { CartFooter } from "../../../shared/model/CartFooter";
 import { BackOnMAin } from "../../../shared/model/BackOnMAin";
 import "@/features/model/cart/cart.css";
 import "@/features/model/cart/styles/cartMedia.css";
-import { RemoveButton } from "../../../shared/model/RemoveButton";
 import { Link } from "react-router-dom";
-import {CartCounter} from "@/features/model/CartCounter.jsx";
+import { CartCounter } from "@/features/model/CartCounter.jsx";
 export const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
 
   const extractPrice = (priceString) => {
-    if(!priceString || typeof priceString !== 'string' ) {
-      return 0
+    if (!priceString || typeof priceString !== "string") {
+      return 0;
     }
     const numericValue = priceString.replace(/[^0-9.]/g, "");
     return parseFloat(numericValue);
@@ -39,7 +38,6 @@ export const Cart = () => {
                 </li>
               </div>
               <div className="cart-card-footer">
-                {/* <RemoveButton item={item} /> */}
                 <CartCounter itemId={item.id} />
                 <Link to="/buy1">
                   <button id="buyBtn">Оплатить</button>

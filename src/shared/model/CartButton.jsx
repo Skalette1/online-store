@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/model/reducers/cartReducer";
-
+import Buy from "/public/assets/public api/Buy.svg";
 export const CartButton = ({ item }) => {
   const dispatch = useDispatch();
   const handleAddToCart = () => {
@@ -20,7 +20,7 @@ export const CartButton = ({ item }) => {
         }}
       >
         <img
-           src="/public/assets/public api/Buy.svg"
+          src={Buy}
           alt="cart"
           style={{
             background: "transparent",

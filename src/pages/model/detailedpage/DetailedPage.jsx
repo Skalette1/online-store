@@ -4,7 +4,7 @@ import { BackOnMAin } from "../../../shared/model/BackOnMAin";
 import { productCart } from "../../../shared/moks/productMoks";
 import "@/pages/model/detailedpage/styles/detail.css";
 import { Link } from "react-router-dom";
-import {CartCounter} from "@/features/model/CartCounter.jsx"
+import { CartCounter } from "@/features/model/CartCounter.jsx";
 import { addToCart } from "../../../features/model/reducers/cartReducer";
 import { useDispatch, useSelector } from "react-redux";
 

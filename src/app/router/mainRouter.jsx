@@ -16,7 +16,6 @@ import { Condition } from "../../entities/ui/buy/Condition.jsx";
 import { AssemblyDetail } from "../../pages/model/detailedpage/AssemblyDetail.jsx";
 import { NotFoundPage } from "./NotFoundPage.jsx";
 
-
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -75,7 +74,7 @@ export const router = createBrowserRouter([
     element: <AssemblyDetail />,
   },
   {
-    path: '*',
+    path: "*",
     element: <NotFoundPage />,
-  }
+  },
 ]);

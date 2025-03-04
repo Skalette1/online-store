@@ -1,19 +1,22 @@
+import Kormushka from "/public/assets/public api/feedingTrough.png";
+import mix from "/public/assets/public api/mix.png";
+import zerna from "/public/assets/public api/birdEat.png";
 export const katalog = [
   {
     id: 1,
-    img: "/public/assets/public api/feedingTrough.png",
+    img: Kormushka,
     name: "Кормушки",
     descriptions: "1",
   },
   {
     id: 2,
-    img: "/public/assets/public api/feedingTrough.png",
+    img: mix,
     name: "Готовые миксы",
     descriptions: "(смеси кормов)",
   },
   {
     id: 3,
-    img: "/public/assets/public api/feedingTrough.png",
+    img: zerna,
     name: "Отдельные виды кормов",
     descriptions: "(зерен)",
   },

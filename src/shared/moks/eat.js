@@ -1,7 +1,9 @@
+import padovan from "/public/assets/public api/birdEat2.png";
+
 export const eat = [
   {
     id: 1,
-    img: "/public/assets/public api/birdEat2.png",
+    img: padovan,
     name: "Корм для птиц RIO Линька",
     descriptions: "для волнистых попугайчиков",
     price: "1000 руб.",
@@ -18,7 +20,7 @@ export const eat = [
   },
   {
     id: 2,
-    img: "/public/assets/public api/birdEat2.png",
+    img: padovan,
     name: "Корм для птиц RIO Линька",
     descriptions: "для волнистых попугайчиков",
     price: "1000 руб.",
@@ -35,7 +37,7 @@ export const eat = [
   },
   {
     id: 3,
-    img: "/public/assets/public api/birdEat2.png",
+    img: padovan,
     name: "Корм для птиц RIO Линька",
     descriptions: "для волнистых попугайчиков",
     price: "1000 руб.",
@@ -52,7 +54,7 @@ export const eat = [
   },
   {
     id: 4,
-    img: "/public/assets/public api/birdEat2.png",
+    img: padovan,
     name: "Корм для птиц RIO Линька",
     descriptions: "для волнистых попугайчиков",
     price: "1000 руб.",
@@ -69,7 +71,7 @@ export const eat = [
   },
   {
     id: 5,
-    img: "/public/assets/public api/birdEat2.png",
+    img: padovan,
     name: "Корм для птиц RIO Линька",
     descriptions: "для волнистых попугайчиков",
     price: "1000 руб.",
@@ -86,7 +88,7 @@ export const eat = [
   },
   {
     id: 6,
-    img: "/public/assets/public api/birdEat2.png",
+    img: padovan,
     name: "Корм для птиц RIO Линька",
     descriptions: "для волнистых попугайчиков",
     price: "1000 руб.",
@@ -103,7 +105,7 @@ export const eat = [
   },
   {
     id: 7,
-    img: "/public/assets/public api/birdEat2.png",
+    img: padovan,
     name: "Корм для птиц RIO Линька",
     descriptions: "для волнистых попугайчиков",
     price: "1000 руб.",
@@ -120,7 +122,7 @@ export const eat = [
   },
   {
     id: 8,
-    img: "/public/assets/public api/birdEat2.png",
+    img: padovan,
     name: "Корм для птиц RIO Линька",
     descriptions: "для волнистых попугайчиков",
     price: "1000 руб.",

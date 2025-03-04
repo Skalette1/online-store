@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Buy from "/public/assets/public api/Buy.svg";
 
+import menu from "/public/assets/public api/menu (1).png";
+import { Profile } from "../model/Profile";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState();
 
@@ -25,28 +28,12 @@ export const Navbar = () => {
         <button>Птицы</button>
         <button>Пожертвования</button>
         <Link to="/cart">
-          <img
-            src="/public/assets/public api/Buy.svg"
-            alt="cart"
-            height={35}
-            width={35}
-          />
+          <img src={Buy} alt="cart" height={35} width={35} />
         </Link>
-        <img
-          src="/public/assets/public api/User.svg"
-          alt="profile"
-          height={35}
-          width={35}
-          style={{ transform: "translateX(4px)" }}
-        />
+        <Profile style={{ transform: "translateX(2px)" }} />
       </div>
       <button className="burger-button" onClick={() => setIsOpen(!isOpen)}>
-        <img
-          src="/public/assets/public api/menu (1).png"
-          alt=""
-          height={40}
-          width={40}
-        />
+        <img src={menu} alt="" height={40} width={40} />
       </button>
     </div>
   );

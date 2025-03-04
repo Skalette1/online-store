@@ -11,7 +11,6 @@ export const Success = () => {
         <Link to="/condition">
           <button>Спасибо!</button>
         </Link>
-        
       </div>
     </>
   );

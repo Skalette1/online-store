@@ -1,7 +1,9 @@
+import bird from "/public/assets/public api/bird.png";
+
 export const productCart = [
   {
     id: 1,
-    img: "/public/assets/public api/bird.png",
+    img: bird,
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     detail:
@@ -20,7 +22,7 @@ export const productCart = [
   },
   {
     id: 2,
-    img: "/public/assets/public api/bird.png",
+    img: bird,
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
@@ -37,7 +39,7 @@ export const productCart = [
   },
   {
     id: 3,
-    img: "/public/assets/public api/bird.png",
+    img: bird,
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
@@ -54,7 +56,7 @@ export const productCart = [
   },
   {
     id: 4,
-    img: "/public/assets/public api/bird.png",
+    img: bird,
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
@@ -71,7 +73,7 @@ export const productCart = [
   },
   {
     id: 5,
-    img: "/public/assets/public api/bird.png",
+    img: bird,
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
@@ -88,7 +90,7 @@ export const productCart = [
   },
   {
     id: 6,
-    img: "/public/assets/public api/bird.png",
+    img: bird,
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
@@ -105,7 +107,7 @@ export const productCart = [
   },
   {
     id: 7,
-    img: "/public/assets/public api/bird.png",
+    img: bird,
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",
@@ -122,7 +124,7 @@ export const productCart = [
   },
   {
     id: 8,
-    img: "/public/assets/public api/bird.png",
+    img: bird,
     name: "PADOVAN OVOMIX GOLD ROSSO",
     description: "Корм для птиц",
     price: "1000 руб.",

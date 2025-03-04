@@ -51,7 +51,7 @@ export const Izba = () => {
                 {item.descriptions}
               </li>
               <li>{item.price}</li>
-              <CartFooter item={item}/>
+              <CartFooter item={item} />
             </ul>
           ),
         )}

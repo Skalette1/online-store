@@ -59,7 +59,7 @@ export const Eat = () => {
                   <li>{gramm.gramm4}</li>
                 </ul>
               ))}
-              <CartFooter item={item}/>
+              <CartFooter item={item} />
             </ul>
           ),
         )}
