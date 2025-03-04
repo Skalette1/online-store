@@ -1,0 +1,16 @@
+
+@media(max-width: 600px) {
+    .detail-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel {
+        width: 80%;
+    }
+}
